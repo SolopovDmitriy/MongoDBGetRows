@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<%- include('partials/head'); %>
+<body>
+<%- include('partials/header'); %>
+<main>
+        <% if(currentPage) { %>
+            <%- include(currentPage); %>
+        <% } %>
+        <% if(error) { %>
+            <div class="container">
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+            </div>
+        <% } %>
+        <% if(message) { %>
+            <div class="container">
+                    <div class="alert alert-success" role="alert">
+                        <%= message %>
+                    </div>
+            </div>
+        <% } %>
+</main>
+        <%- include('partials/footer'); %>
+</body>
+</html>
